@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel 13 MCP - Model Context Protocol Server</title>
+    <link rel="stylesheet" href="assets/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">⚡</span>
+                <span class="brand-name">Laravel 13 MCP</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#examples">Examples</a>
+                <a href="#installation">Installation</a>
+                <a href="#usage">Usage</a>
+                <a href="https://github.com/shamimlaravel/laravel-13-mcp" target="_blank" class="btn-github">GitHub</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">v1.0.1 • Laravel 13+ • PHP 8.3+</span>
+                <h1>AI Skill for Laravel 13<br>PHP 8 Attributes</h1>
+                <p>Write new Laravel 13 code and refactor old code to modern PHP 8 attribute syntax. Supports 74+ attributes across 13 Laravel components.</p>
+                <div class="hero-actions">
+                    <pre class="install-cmd"><code>composer require shamimstack/laravel-13-mcp</code><button class="copy-btn" data-copy="composer require shamimstack/laravel-13-mcp">Copy</button></pre>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">74+</span>
+                        <span class="stat-label">Attributes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">13</span>
+                        <span class="stat-label">Components</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">80+</span>
+                        <span class="stat-label">Examples</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-code">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-title">Before → After</span>
+                        <div class="code-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <pre class="code-content"><code><span class="code-comment">// Before (Laravel 12)</span>
+<span class="code-keyword">class</span> <span class="code-class">Post</span> <span class="code-keyword">extends</span> Model
+{
+    <span class="code-keyword">protected</span> <span class="code-var">$table</span> = <span class="code-string">'posts'</span>;
+    <span class="code-keyword">protected</span> <span class="code-var">$fillable</span> = [<span class="code-string">'title'</span>, <span class="code-string">'body'</span>];
+    <span class="code-keyword">protected</span> <span class="code-var">$casts</span> = [<span class="code-string">'is_published'</span> => <span class="code-string">'boolean'</span>];
+}
+
+<span class="code-comment">// After (Laravel 13)</span>
+<span class="code-keyword">use</span> Illuminate\Database\Eloquent\Attributes\<span class="code-class">Table</span>;
+<span class="code-keyword">use</span> Illuminate\Database\Eloquent\Attributes\<span class="code-class">Fillable</span>;
+<span class="code-keyword">use</span> Illuminate\Database\Eloquent\Attributes\<span class="code-class">Cast</span>;
+
+<span class="code-attr">#[Table(<span class="code-string">'posts'</span>)]</span>
+<span class="code-attr">#[Fillable([<span class="code-string">'title'</span>, <span class="code-string">'body'</span>])]</span>
+<span class="code-attr">#[Cast(<span class="code-string">'is_published'</span>, <span class="code-string">'boolean'</span>)]</span>
+<span class="code-keyword">class</span> <span class="code-class">Post</span> <span class="code-keyword">extends</span> Model {}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Supported Attributes</h2>
+            <p class="section-desc">Comprehensive coverage of Laravel 13 PHP 8 attributes</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Models</h3>
+                    <ul>
+                        <li><code>#[Table]</code></li>
+                        <li><code>#[Fillable]</code></li>
+                        <li><code>#[Guarded]</code></li>
+                        <li><code>#[Hidden]</code></li>
+                        <li><code>#[Visible]</code></li>
+                        <li><code>#[Cast]</code></li>
+                        <li><code>#[Appends]</code></li>
+                        <li><code>#[With]</code></li>
+                        <li><code>#[Touches]</code></li>
+                        <li><code>#[Connection]</code></li>
+                        <li>+12 more</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📬</div>
+                    <h3>Jobs</h3>
+                    <ul>
+                        <li><code>#[Tries]</code></li>
+                        <li><code>#[Timeout]</code></li>
+                        <li><code>#[Backoff]</code></li>
+                        <li><code>#[MaxExceptions]</code></li>
+                        <li><code>#[Queue]</code></li>
+                        <li><code>#[Connection]</code></li>
+                        <li><code>#[UniqueFor]</code></li>
+                        <li><code>#[FailOnTimeout]</code></li>
+                        <li>+3 more</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Commands</h3>
+                    <ul>
+                        <li><code>#[Signature]</code></li>
+                        <li><code>#[Description]</code></li>
+                        <li><code>#[Help]</code></li>
+                        <li><code>#[Hidden]</code></li>
+                        <li><code>#[Aliases]</code></li>
+                        <li><code>#[Usage]</code></li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Controllers</h3>
+                    <ul>
+                        <li><code>#[Middleware]</code></li>
+                        <li><code>#[Authorize]</code></li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Form Requests</h3>
+                    <ul>
+                        <li><code>#[ErrorBag]</code></li>
+                        <li><code>#[RedirectTo]</code></li>
+                        <li><code>#[RedirectToRoute]</code></li>
+                        <li><code>#[StopOnFirstFailure]</code></li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <h3>Testing</h3>
+                    <ul>
+                        <li><code>#[Seed]</code></li>
+                        <li><code>#[Seeder]</code></li>
+                        <li><code>#[SetUp]</code></li>
+                        <li><code>#[TearDown]</code></li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💉</div>
+                    <h3>Container DI</h3>
+                    <ul>
+                        <li><code>#[CurrentUser]</code></li>
+                        <li><code>#[Config]</code></li>
+                        <li><code>#[DB]</code></li>
+                        <li><code>#[Cache]</code></li>
+                        <li><code>#[Log]</code></li>
+                        <li><code>#[Storage]</code></li>
+                        <li>+8 more</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Factories</h3>
+                    <ul>
+                        <li><code>#[UseModel]</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="examples">
+            <h2>Code Examples</h2>
+            <p class="section-desc">Before and after conversions for all components</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="models">Models</button>
+                <button class="tab-btn" data-tab="jobs">Jobs</button>
+                <button class="tab-btn" data-tab="commands">Commands</button>
+                <button class="tab-btn" data-tab="controllers">Controllers</button>
+                <button class="tab-btn" data-tab="container">Container DI</button>
+            </div>
+
+            <div class="tab-content active" id="models">
+                <div class="example-block">
+                    <div class="example-before">
+                        <h4>Before</h4>
+                        <pre><code>class Post extends Model
+{
+    protected $table = 'posts';
+    protected $fillable = ['title', 'body'];
+    protected $casts = [
+        'is_published' => 'boolean',
+    ];
+}</code></pre>
+                    </div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-after">
+                        <h4>After</h4>
+                        <pre><code>#[Table('posts')]
+#[Fillable(['title', 'body'])]
+#[Cast('is_published', 'boolean')]
+class Post extends Model {}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="jobs">
+                <div class="example-block">
+                    <div class="example-before">
+                        <h4>Before</h4>
+                        <pre><code>class SendEmail implements ShouldQueue
+{
+    public $tries = 5;
+    public $timeout = 120;
+    public $queue = 'emails';
+}</code></pre>
+                    </div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-after">
+                        <h4>After</h4>
+                        <pre><code>#[Tries(5)]
+#[Timeout(120)]
+#[Queue('emails')]
+class SendEmail implements ShouldQueue {}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="commands">
+                <div class="example-block">
+                    <div class="example-before">
+                        <h4>Before</h4>
+                        <pre><code>class SendEmails extends Command
+{
+    protected $signature = 'mail:send {user}';
+    protected $description = 'Send emails';
+}</code></pre>
+                    </div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-after">
+                        <h4>After</h4>
+                        <pre><code>#[Signature('mail:send {user}')]
+#[Description('Send emails')]
+class SendEmails extends Command {}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="controllers">
+                <div class="example-block">
+                    <div class="example-before">
+                        <h4>Before</h4>
+                        <pre><code>class DashboardController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+}</code></pre>
+                    </div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-after">
+                        <h4>After</h4>
+                        <pre><code>#[Middleware('auth')]
+class DashboardController extends Controller {}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="container">
+                <div class="example-block">
+                    <div class="example-before">
+                        <h4>Before</h4>
+                        <pre><code>class PaymentService
+{
+    public function __construct()
+    {
+        $this->stripeKey = config('stripe.key');
+    }
+}</code></pre>
+                    </div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-after">
+                        <h4>After</h4>
+                        <pre><code>class PaymentService
+{
+    public function __construct(
+        #[Config('stripe.key')] private string $key
+    ) {}
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation" class="installation">
+            <h2>Installation</h2>
+            <div class="install-steps">
+                <div class="install-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Install via Composer</h4>
+                        <pre><code>composer require shamimstack/php-laravel-13-skills</code><button class="copy-btn" data-copy="composer require shamimstack/php-laravel-13-skills">Copy</button></pre>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Use with AI Agent</h4>
+                        <p>Upload the SKILL.md file to your AI agent or copy it into your conversation. The skill will automatically help you refactor Laravel code to use PHP 8 attributes.</p>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Start Refactoring</h4>
+                        <p>Ask your AI agent to convert your Laravel code. Example: "Refactor this Post model to use Laravel 13 attributes"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="usage">
+            <h2>Usage</h2>
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <h3>🤖 For AI Agents</h3>
+                    <p>Use this skill with opencode, skills.sh, or any AI coding assistant. The skill provides comprehensive knowledge of Laravel 13 attributes.</p>
+                    <pre><code>Refactor this model to Laravel 13:
+class Product extends Model {
+    protected $table = 'products';
+    protected $fillable = ['name', 'price'];
+}</code></pre>
+                </div>
+                <div class="usage-card">
+                    <h3>📖 Reference Guide</h3>
+                    <p>Use QUICKREF.md for a quick attribute conversion reference. Contains all mappings from old properties to new attributes.</p>
+                    <pre><code># Quick Reference
+
+| Old | New |
+|-----|-----|
+| $table | #[Table] |
+| $fillable | #[Fillable] |
+| $casts | #[Cast] |</code></pre>
+                </div>
+                <div class="usage-card">
+                    <h3>📚 Examples</h3>
+                    <p>Browse 80+ example conversions in src/Examples/. Each file contains detailed before/after examples.</p>
+                    <ul class="example-list">
+                        <li>Models.md - 11 examples</li>
+                        <li>Jobs.md - 10 examples</li>
+                        <li>Commands.md - 7 examples</li>
+                        <li>Controllers.md - 6 examples</li>
+                        <li>+8 more files</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="links">
+            <h2>Resources</h2>
+            <div class="links-grid">
+                <a href="https://github.com/shamimlaravel/php-laravel-13-skills" class="link-card" target="_blank">
+                    <span class="link-icon">📂</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://packagist.org/packages/shamimstack/php-laravel-13-skills" class="link-card" target="_blank">
+                    <span class="link-icon">📦</span>
+                    <span>Packagist</span>
+                </a>
+                <a href="https://laraveldaily.com/post/php-attributes-in-laravel-13-the-ultimate-guide-36-new-attributes" class="link-card" target="_blank">
+                    <span class="link-icon">📖</span>
+                    <span>Laravel Daily</span>
+                </a>
+                <a href="https://laravel.com/docs/13.x" class="link-card" target="_blank">
+                    <span class="link-icon">📚</span>
+                    <span>Laravel Docs</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Built by <a href="https://github.com/shamimlaravel">Shamim</a> • MIT License</p>
+            <p class="footer-links">
+                <a href="https://github.com/shamimlaravel/php-laravel-13-skills">GitHub</a> •
+                <a href="https://packagist.org/packages/shamimstack/php-laravel-13-skills">Packagist</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
