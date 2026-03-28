@@ -1,0 +1,41 @@
+{
+  "name": "@shamimstack/laravel-13-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Laravel 13 PHP 8 attribute refactoring - provides AI-powered tools to convert Laravel code to attribute syntax",
+  "main": "SKILL.md",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "laravel",
+    "laravel-13",
+    "mcp",
+    "model-context-protocol",
+    "php-attributes",
+    "php-8",
+    "refactor",
+    "ai",
+    "skill"
+  ],
+  "homepage": "https://github.com/shamimlaravel/laravel-13-mcp",
+  "author": {
+    "name": "Shamim",
+    "email": "shamimstack@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamimlaravel/laravel-13-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shamimlaravel/laravel-13-mcp/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/shamimlaravel/laravel-13-mcp"
+  }
+}

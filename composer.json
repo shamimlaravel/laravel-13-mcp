@@ -1,0 +1,66 @@
+{
+    "name": "shamimstack/laravel-13-mcp",
+    "description": "MCP server for Laravel 13 PHP 8 attribute refactoring - provides AI-powered tools to convert Laravel code to attribute syntax",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "laravel-13",
+        "mcp",
+        "model-context-protocol",
+        "php-attributes",
+        "php-8",
+        "refactor",
+        "eloquent",
+        "ai",
+        "skill"
+    ],
+    "homepage": "https://github.com/shamimlaravel/laravel-13-mcp",
+    "authors": [
+        {
+            "name": "Shamim",
+            "email": "shamimstack@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/shamimlaravel/laravel-13-mcp/issues",
+        "source": "https://github.com/shamimlaravel/laravel-13-mcp"
+    },
+    "require": {
+        "php": ">=8.3",
+        "laravel/framework": "^13.0",
+        "laravel/mcp": "^0.6"
+    },
+    "require-dev": {
+        "php": ">=8.3",
+        "laravel/framework": "^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shamimstack\\Laravel13Mcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shamimstack\\Laravel13Mcp\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shamimstack\\Laravel13Mcp\\Laravel13McpServiceProvider"
+            ]
+        }
+    },
+    "fund": {
+        "type": "github",
+        "url": "https://github.com/shamimlaravel/laravel-13-mcp"
+    }
+}
