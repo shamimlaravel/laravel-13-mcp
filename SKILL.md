@@ -1,9 +1,9 @@
 ---
-name: Laravel 13 MCP Server
-description: MCP server for Laravel 13 PHP 8 attribute refactoring - provides AI-powered tools to convert Laravel code to attribute syntax
+name: laravel-13-mcp-server
+description: AI skill for Laravel 13 MCP server - enables AI-powered attribute refactoring through Model Context Protocol
 version: 1.0.0
 author: shamimstack
-tags: [laravel, php, laravel-13, mcp, model-context-protocol, attributes, refactor]
+tags: [laravel, php, mcp, attributes, refactor]
 requires: PHP 8.3+ | Laravel 13+ | laravel/mcp ^0.6
 ---
 
